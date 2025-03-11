@@ -1,0 +1,12 @@
+@import url("./estilo.etiquetas.css");
+@import url("./estilo.css");
+@import url("./outro_estilo.css");
+
+.imaxenes-flex{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
