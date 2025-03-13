@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended: true}))
 
 
 // Accedo o arquivo estático
-app.use(express.static(path.join(__dirname, "src")));
+app.use(express.static(path.join(__dirname, "dist")));
 //### GETTERS
 app.get("/recibo-datos-do-servidor",(req,res)=>{
     res.send({
