@@ -4,12 +4,14 @@ const { paxinaApp, paxinaNoUser,paxinaLogueo, paxinaInvoices, paxinaCesta, paxin
 
 const app = express();
 
-// Paxinas
-app.use(express.urlencoded({extended: true}))
-
+// USE
+// É para interpretar datos do formulario
+app.use(express.urlencoded({extended: true}));
+// É para interpretar datos json 
+app.use(express.json())
 
 // Accedo o arquivo estático
-app.use(express.static(path.join(__dirname, "src")));
+app.use(express.static(path.join(__dirname, "dist")));
 //### GETTERS
 app.get("/recibo-datos-do-servidor",(req,res)=>{
     res.send({
@@ -48,6 +50,7 @@ app.get("/graficas",(req,res)=>{
 })
 //Un evento dende o cliente
 app.post("/envio-datos-o-servidor",(req,res)=>{
+    console.log("req.body ",req.body,req.body.datosEnvio )
     res.send({mensaxe:"datos enviados"})
 })
 //##########

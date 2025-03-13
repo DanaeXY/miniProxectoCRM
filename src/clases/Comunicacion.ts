@@ -29,8 +29,9 @@ export class Comunicacion{
             body:JSON.stringify(datosEnvio)
         }
         let resposta = await fetch(endpoint,obxetoEnvio);
-        this.datos = await resposta.json();
 
+        this.datos = await resposta.json();
+        console.log("estou en Comuniccion ", this.datos)
     }
 
     static get respostaServidor(){
