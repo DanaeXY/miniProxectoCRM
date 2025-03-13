@@ -1,9 +1,9 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
-    mode: "development",// pode ser 'mode:production'
+    mode: "production",// pode ser 'mode:production'
     devtool: "inline-source-map",
     entry: './src/index.ts', 
     module: {
@@ -31,25 +31,16 @@ module.exports = {
     },
     output: {
         filename: './javascript/bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'dist')
     },
     plugins: [
-      new HtmlWebpackPlugin({
-        filename: 'index.html', // Arquivo de salida
-        template: './src/index.html', // Plantilla HTML
-      }),
-      new HtmlWebpackPlugin({
-        filename: '/views/app.html', // Arquivo de salida
-        template: './src/views/app.html', // Plantilla HTML
-      }),
-      new HtmlWebpackPlugin({
-        filename: '/views/no-user.html', // Arquivo de salida
-        template: './src/views/no-user.html', // Plantilla HTML
-      }),
-      new HtmlWebpackPlugin({
-        filename: '/views/logueo.html', // Arquivo de salida
-        template: './src/views/logueo.html', // Plantilla HTML
-      }),
+      
         new MiniCssExtractPlugin({ filename: './css/styles.css' }), // Arquivo CSS final
+        new CopyPlugin({
+          patterns: [
+            { from: "./src/imaxenes", to: "imaxenes" },
+            { from: "./src/views", to: "views" },
+          ],
+        })
     ],
 };

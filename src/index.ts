@@ -1,9 +1,9 @@
 
 import { Comunicacion } from "./clases/Comunicacion";
-
+//import fondo from "./fondoBueno.png";
 import './css/main.css'; // Temos que integrar o CSS para que webpack o compile
 
-if(location.pathname == "/logueo-basico"){
+if(location.pathname == "/paxina-app"){
     const refBotonGET: HTMLButtonElement = document.querySelector("#solicitudeGET");
     const refBotonPOST: HTMLButtonElement = document.querySelector("#solicitudePOST")
     

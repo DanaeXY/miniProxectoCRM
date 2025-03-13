@@ -1,7 +1,7 @@
 @import url("./estilo.etiquetas.css");
 @import url("./estilo.css");
 @import url("./outro_estilo.css");
-
+@import url("./home.css");
 .imaxenes-flex{
     width: 100%;
     display: flex;
@@ -9,4 +9,7 @@
     align-items: center;
     
 }
-
+/*   XENÉRICOS */
+aside[name="menu-lateral"]{
+    background: linear-gradient(#4C8DEB,#4C60EB);
+}
