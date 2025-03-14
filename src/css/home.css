@@ -16,21 +16,27 @@ main[name="main-app"]{
     background-color: red;
     & > header{
         /* background-color: white; */
-        background-color: orange;
+        background-color: rgb(255, 255, 255);
         height: 70px;
+        color:black
     }
     & > header + section{
-        background-color: green;
+        background-color: #F5F5F5;
         display: flex;
         flex-direction: column; 
         width: 100%;
     }
     & > header + section > header {
-        background-color: aqua;
+        --altura:80px
+        background-color: #F5F5F5;
+        color: #405169;
+        font-size: 28px;
+        height: var(--altura);
+        line-height: var(--altura);
     }
     
 }
  section[name="section-imaxes-home"]{
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 } 

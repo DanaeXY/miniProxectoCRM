@@ -8,13 +8,13 @@ module.exports = {
     entry: './src/index.ts', 
     module: {
         rules: [
-            {
+             {
                 test: /\.css$/i,
                 use: [
                     MiniCssExtractPlugin.loader, // Extrae o CSS nun arquivo separado
                     'css-loader', // Procesa o CSS
                 ],
-            },
+            } ,
             {
                 test: /\.ts$/,
                 use: 'ts-loader', // Procesa arquivos TypeScript
