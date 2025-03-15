@@ -1,14 +1,7 @@
-body[name="logueo"]{
-    height: 100vh;
-    display: flex
-;
-    justify-content: center;
-    align-items: center;
-}
+
 
 form[name="formulario-logueo"]{
-    display: flex
-;
+    display: flex;
     flex-direction: column;
     gap: 5px;
     border: 1px solid red;
