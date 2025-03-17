@@ -1,5 +1,6 @@
 /**
- * @class clase Comunicacion
+ * @author Pepito Gutierrez
+ * @class Comunicacion
  * @method metodoGet
  * @method metodoPost
  */
@@ -8,7 +9,7 @@ export class Comunicacion{
     
     static datos: Object;
     /**
-     * Método que fai un GET
+     * @method metodoGet que fai un GET
      * @param endpoint será un endpoint de tipo texto
      */
     static async metodoGet(endpoint: string){
@@ -17,7 +18,7 @@ export class Comunicacion{
         this.datos = await datoServidor.json();
     }
     /**
-     * Método que fai un POST
+     * @method metodoPost é estático que fai un POST
      * @param endpoint  será un endpoint de tipo texto
      */
     static async metodoPost(endpoint: string){
@@ -46,7 +47,7 @@ export class Comunicacion{
         console.log("estou en Comuniccion ", this.datos)
     }
     /**
-     * Método que devolve os datos
+     * @method respostaServidor que devolve os datos
      * @returns devolve datos
      */
     static get respostaServidor(){

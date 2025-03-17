@@ -13,6 +13,12 @@ app.use(express.json())
 // Accedo o arquivo estático
 app.use(express.static(path.join(__dirname, "dist")));
 //### GETTERS
+/**
+ * @function get 
+ * @param endpoint '/recibo-datos-do-servidor'
+ * @returns mensaxe obxeto
+ *
+ */
 app.get("/recibo-datos-do-servidor",(req,res)=>{
     res.send({
         mensaxe:{

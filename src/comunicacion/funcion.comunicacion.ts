@@ -1,4 +1,17 @@
+/**
+ * @function comunicacionGET función asíncrona
+ */
 export const comunicacionGET = async () =>{
+    /**
+     * @param datosObxeto é un tipo de dato type
+     * ```typescript
+     * type datosObxeto = {
+     *   dato1: string,
+     *   dato2: string,
+     *  dato3: number
+     * }
+     * ```
+     */
     type datosObxeto = {
         dato1: string,
         dato2: string,

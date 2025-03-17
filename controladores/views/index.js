@@ -1,3 +1,8 @@
+/**
+ * @author Pepito Rodriguez
+ * @param paxinaApp é a páxina de app
+ * @exports paxinasViews este ficheiro exporta as páxinas de views
+ */
 const paxinaApp = require("./paxina.app.js")
 const paxinaAxustes = require("./paxina.axustes.js")
 const paxinaClientes = require("./paxina.clientes.js")
