@@ -1,7 +1,7 @@
 # Observacións 
 ## Indice
 - [Typedoc](#TYPEDOC)
-- [ServidorFront](#ServidorFRONT)
+- [Servidor-Front](#Servidor-FRONT)
 - [JSDoc](#JSDoc)
 
 ## TYPEDOC
