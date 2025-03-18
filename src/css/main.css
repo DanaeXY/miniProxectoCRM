@@ -2,6 +2,7 @@
 @import url("./estilo.css");
 @import url("./outro_estilo.css");
 @import url("./home.css");
+@import url("./paxina.home/index.css");
 .imaxenes-flex{
     width: 100%;
     display: flex;

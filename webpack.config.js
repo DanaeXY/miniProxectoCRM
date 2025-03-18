@@ -34,6 +34,10 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
+      new HtmlWebpackPlugin({
+        filename: './index.html', // Arquivo de salida
+        template: './src/index.html', // Plantilla HTML
+      }),
       
         new MiniCssExtractPlugin({ filename: './css/styles.css' }), // Arquivo CSS final
         new CopyPlugin({
