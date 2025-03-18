@@ -1,0 +1,103 @@
+/* Estilos generales */
+#body-sa {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+#contenedor-sa { 
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1200px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Div Superior */
+#divSuperior-sa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #2c3e50;
+    color: white;
+}
+
+/* Caja de búsqueda */
+.contenedorSearch-sa {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 5px;
+    width: 200px;
+}
+
+.contenedorSearch-sa input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 100%;
+}
+
+#lupa-sa img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Círculos de usuario */
+.circuloUsuarioI-sa,
+.circuloUsuarioD-sa {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+}
+
+/* Div Lateral Izquierdo */
+#divLateralIzquierdo-sa {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background: #ecf0f1;
+}
+
+#divLateralIzquierdo-sa div {
+    margin-bottom: 10px;
+}
+
+#divLateralIzquierdo-sa img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Div Inferior Derecho */
+#divInferiorDerecho-sa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+    background: #bdc3c7;
+}
+
+.paraHome-sa {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.six-buttons-sa {
+    margin: 5px;
+}
+
+.six-buttons-sa img {
+    width: 50px;
+    height: 50px;
+}
