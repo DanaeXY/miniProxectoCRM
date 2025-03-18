@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const { paxinaApp, paxinaNoUser,paxinaLogueo, paxinaInvoices, paxinaCesta, paxinaCustomers, paxinaGraficas, paxinaNewProduct } = require("./controladores/views");
+const { paxinaApp, paxinaNoUser,paxinaLogueo, paxinaInvoices, paxinaCesta, paxinaCustomers, paxinaGraficas, paxinaNewProduct, paxinaHome } = require("./controladores/views");
 
 const app = express();
 
@@ -38,7 +38,7 @@ app.post("/paxina-app",(req,res)=>{
 
     let condicion = req.body.nome2 === 'Israel' && req.body.apelido2 === 'mariano';
     
-    condicion ? paxinaApp(req,res) : paxinaNoUser(req,res)
+    condicion ? paxinaHome(req,res) : paxinaNoUser(req,res)
 
 })
 // GETTERS PáXINAS
