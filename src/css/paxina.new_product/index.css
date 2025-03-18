@@ -209,7 +209,7 @@
 
 
 /* Efecto hover */
-#boton1:hover, #boton2:hover {
+#boton1-sa:hover, #boton2-sa:hover {
     background-color: #000; /* Fondo negro */
     color: #fff; /* Letras blancas */
 }
@@ -228,7 +228,7 @@
     border-radius: 12px; /* Para bordes redondeados */
     background-color: #4C8DEB;
   }
-  .botonSend:hover {
+  .botonSend-sa:hover {
     cursor:pointer;
     background-color: #45a049;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Añade una sombra */
@@ -305,7 +305,7 @@
 
 
 
-label[for="name"] {
+.etiqueta[for="name"] {
     width: 111px;
     height: 25px;
     position: absolute; /* o relative, fixed, sticky */
@@ -314,7 +314,7 @@ label[for="name"] {
  }
 
 
-#name{
+#name-sa{
     width: 97px;
     height: 33px;
     position:absolute;
@@ -330,7 +330,7 @@ label[for="name"] {
 }
 
 
-label[for="codigo"] {
+.etiqueta[for="codigo"] {
     width: 111px;
     height: 25px;
     position: absolute; /* o relative, fixed, sticky */
@@ -339,7 +339,7 @@ label[for="codigo"] {
  }
 
 
-#codigo{
+#codigo-sa{
     width: 343px;
     height: 33px;
     position:absolute;
@@ -351,7 +351,7 @@ label[for="codigo"] {
     opacity: 0.1865;
 }
 
-label[for="stock"] {
+.etiqueta[for="stock"] {
     width: 111px;
     height: 25px;
     position: absolute; /* o relative, fixed, sticky */
@@ -361,7 +361,7 @@ label[for="stock"] {
 
  
 
-#stock{
+#stock-sa{
     width: 343px;
     height: 33px;
     position:absolute;
@@ -374,7 +374,7 @@ label[for="stock"] {
 }
 
 
-label[for="tipo"] {
+.etiqueta[for="tipo"] {
     width: 111px;
     height: 25px;
     position: absolute; /* o relative, fixed, sticky */
@@ -383,7 +383,7 @@ label[for="tipo"] {
  }
 
 
-#tipo{
+#tipo-sa{
     width: 343px;
     height: 33px;
     position:absolute;
@@ -395,7 +395,7 @@ label[for="tipo"] {
     opacity: 0.1865;
 }
 
-label[for="peso"] {
+.etiqueta[for="peso"] {
     width: 111px;
     height: 25px;
     position: absolute; /* o relative, fixed, sticky */
@@ -404,7 +404,7 @@ label[for="peso"] {
  }
 
 
-#peso{
+#peso-sa{
     width: 343px;
     height: 33px;
     position:absolute;
@@ -416,7 +416,7 @@ label[for="peso"] {
     opacity: 0.1865;
 }
 
-label[for="precio"] {
+.etiqueta[for="precio"] {
     width: 111px;
     height: 25px;
     position: absolute; /* o relative, fixed, sticky */
@@ -425,7 +425,7 @@ label[for="precio"] {
  }
 
 
-#precio{
+#precio-sa{
     width: 343px;
     height: 33px;
     position:absolute;
@@ -449,18 +449,18 @@ label[for="precio"] {
 
 /* Tablets y laptops medianos (max-width: 1024px) */
 @media (max-width: 1024px) {
-    #contenedor {
+    #contenedor-sa {
         width: 100%;
         height: auto;
     }
 
-    #divInferiorDerecho {
+    #divInferiorDerecho-sa {
         grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
         grid-template-rows: auto; /* Ajustar altura automáticamente */
         gap: 20px;
     }
 
-    #divInferiorDerecho > div {
+    #divInferiorDerecho-sa > div {
         width: 90%; /* Ajustar ancho para pantallas pequeñas */
         height: auto; /* Mantener proporciones */
     }
@@ -468,11 +468,11 @@ label[for="precio"] {
 
 /* Smartphones (< 768px) */
 @media (max-width: 768px) {
-    #divLateralIzquierdo {
+    #divLateralIzquierdo-sa {
         display: none; /* Ocultar el lateral izquierdo en pantallas pequeñas */
     }
 
-    #divInferiorDerecho {
+    #divInferiorDerecho-sa {
         justify-content: center;
         align-content: center;
     }
@@ -481,7 +481,7 @@ label[for="precio"] {
 
 
 
-.tresEngranajes{
+.tresEngranajes-sa{
     position:absolute;
     top:144px;
     left:898px;
@@ -491,7 +491,7 @@ label[for="precio"] {
 
 }
 
-.engranaje {
+.engranaje-sa {
     width: 100%; /* Ajusta el tamaño según lo necesites */
     height: auto; /* Mantiene la proporción */
     display: block; /* Asegura que se comporte como un bloque */
