@@ -33,7 +33,12 @@ module.exports = {
         filename: './javascript/bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
+    /*vanessa */
     plugins: [
+        new HtmlWebpackPlugin({
+            filename: './views/customers.html',
+            template: './src/views/customers.html',
+        }),
       
         new MiniCssExtractPlugin({ filename: './css/styles.css' }), // Arquivo CSS final
         new CopyPlugin({
