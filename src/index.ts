@@ -57,7 +57,10 @@ if(location.pathname == "/paxina-app"){
 if(location.pathname == "/invoices"){
     console.log("estou en invoice")
 }
-
+if(location.pathname == "/recibo-datos-do-servidor"){
+    console.log("estou document.querySelector")
+    console.log("document.querySelector ",document.body)
+}
 }
 
 main()
