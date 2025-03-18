@@ -35,6 +35,11 @@ module.exports = {
     },
     
     plugins: [
+        /*vanessa */
+        new HtmlWebpackPlugin({
+            filename: './views/customers.html',
+            template: './src/views/customers.html',
+        }),
       
         new MiniCssExtractPlugin({ filename: './css/styles.css' }), // Arquivo CSS final
         new CopyPlugin({

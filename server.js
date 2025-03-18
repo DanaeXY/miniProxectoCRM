@@ -24,7 +24,10 @@ app.get("/logueo",(req,res)=>{
     paxinaLogueo(req,res)
 })
 
-
+/*vanessa */
+app.get("/customers",(req,res)=>{
+    paxinaCustomers(req,res)
+})
 //### POST
 app.post("/paxina-app",(req,res)=>{
     
