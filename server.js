@@ -59,9 +59,10 @@ app.get("/clientes",(req,res)=>{
 app.get("/graficas",(req,res)=>{
     paxinaGraficas(req,res)
 })
-app.get("/new-product",(req,res)=>{
+app.get("/productos",(req,res)=>{
     paxinaNewProduct(req,res)
 })
+
 //Un evento dende o cliente
 app.post("/envio-datos-o-servidor",(req,res)=>{
     console.log("req.body ",req.body,req.body.datosEnvio )
