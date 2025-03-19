@@ -40,7 +40,7 @@ module.exports = {
           }),
           new HtmlWebpackPlugin({
             filename: 'home.html', // Arquivo de salida
-            template: './src/home.html', // Plantilla HTML
+            template: './src/views/home.html', // Plantilla HTML
           }),,
           new HtmlWebpackPlugin({
             filename: './views/app.html', // Arquivo de salida
