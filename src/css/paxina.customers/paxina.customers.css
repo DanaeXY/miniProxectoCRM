@@ -1,3 +1,4 @@
+/*VANESSA*/
 @import url("./auxiliar.css/aux1.customers.css");
 
 @media (min-width: 425px) {
@@ -7,7 +8,7 @@
     background-color: var(--color-fondo-body);
   }
 
-  .menuSuperior {
+  .menuSuperior_customers {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     height: 65px;
@@ -15,8 +16,8 @@
     align-items: var(--alineacion-central); 
   }
 
-  #grupoIzquierda,
-  #grupoDerecha {
+  #grupoIzquierda-customers,
+  #grupoDerecha-customers {
     display: flex;
     justify-self: left;
   }
@@ -24,7 +25,7 @@
     width: 20%;
   }
 
-  #grupoDerecha {
+  #grupoDerecha-customers {
     justify-self: right;
     margin-right: 20px;
   }
@@ -39,7 +40,7 @@
     width: 200px;
   }
 
-  .barraLateral {
+  .barraLateral_customers {
     width: 4.05%;
     background: var(--fondo_barra_lateral);
     position: fixed;
@@ -56,7 +57,7 @@
     margin-top: 45px;
   }
 
-  .main {
+  .main_customers {
     margin-left: 70px;
     padding: 20px;
     color: #405169;
@@ -64,7 +65,7 @@
     margin-top: 15px;
   }
 
-  .main-header {
+  .main-header_customers {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,7 +83,7 @@
     }
   }
 
-  .divHamburguesa {
+  .divHamburguesa-customers {
     background-color: var(--color-barra);
     width: var(--ancho-cien-por-cien);
     height: 50px;
@@ -94,18 +95,18 @@
     }
   }
 
-  .tabla-costumers th,
-  .tabla-costumers td {
+  .tabla-customers th,
+  .tabla-customers td {
     border: 1px solid #ddd;
     padding: 8px;
   }
-  .tabla-costumers {
+  .tabla-customers {
     float: right;
     width: 90%;
     margin-top: 40px;
   }
 
-  .tabla-costumers tr:nth-child(even) {
+  .tabla-customers tr:nth-child(even) {
     background-color: #f2f2f2;
   }
 
@@ -133,7 +134,7 @@
 }
 
 @media (min-width: 1441px) and (max-width: 2560px){
-  .barraLateral {
+  .barraLateral_customers {
     width: 3.05%;/*en pantalla completa sí encajan*/
     background: var(--fondo_barra_lateral);
     position: fixed;
