@@ -97,14 +97,27 @@ header {
 .wrapper-imaxenes {
   width: 600px;
 }
-
+.envoices-fran {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 .draft-fran {
   position: absolute;
   z-index: -2;
   top: 0;
   left: 0;
   width: 100%;
-
+}
+ .datos-tabla-fran {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+ }
 .recurring-invoices-fran {
   position: absolute;
   z-index: -2;
