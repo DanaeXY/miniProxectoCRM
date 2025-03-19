@@ -6,7 +6,7 @@ const path = require("path");
  * @returns @param res.status.sendFile envía a páxina de app.html
  */
 const paxinaHome = (req,res)=>{
-    res.status(200).sendFile(path.join(__dirname,"../../dist/views/paxina.home.html"))
+    res.status(200).sendFile(path.join(__dirname,"../../dist/views/home.html"))
 }
 
 module.exports = paxinaHome

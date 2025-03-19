@@ -39,7 +39,7 @@ module.exports = {
             template: './src/index.html', // Plantilla HTML
           }),
           new HtmlWebpackPlugin({
-            filename: 'home.html', // Arquivo de salida
+            filename: './views/home.html', // Arquivo de salida
             template: './src/views/home.html', // Plantilla HTML
           }),,
           new HtmlWebpackPlugin({
