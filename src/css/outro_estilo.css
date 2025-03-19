@@ -97,14 +97,14 @@ header {
 .wrapper-imaxenes {
   width: 600px;
 }
-.posicion-imaxen-fondo {
+.grupo-tablas-fran {
   position: absolute;
   z-index: -2;
   top: 0;
   left: 0;
   width: 100%;
 }
-.posicion-chico-sentado {
+.menu-gastos-fran {
   position: absolute;
   z-index: -1;
   top: 0;
