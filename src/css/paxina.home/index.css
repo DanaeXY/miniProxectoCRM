@@ -96,6 +96,7 @@
 #divLateralIzquierdo-sa {
     display: flex; /* Usar flexbox para el contenedor */
     flex-direction: column; /* Colocar los divs uno debajo del otro */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el div */
 }
 
 #divLateralIzquierdo-sa div {

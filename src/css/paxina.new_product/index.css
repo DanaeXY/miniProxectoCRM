@@ -46,6 +46,7 @@
     color: white;
     text-align: center;
     line-height: 20px;
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el div */
 }
 
 /* Div inferior derecho */
