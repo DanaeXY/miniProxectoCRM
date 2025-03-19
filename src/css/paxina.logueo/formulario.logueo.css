@@ -7,7 +7,7 @@ form[name="formulario-logueo"]{
     border: 1px solid red;
     width: 50%;
     padding: 3%;
-    input{
+    input[name="nome2"]{
         padding: 10px;
         font-size: 24px;
         border-radius: 10px;

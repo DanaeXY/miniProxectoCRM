@@ -38,8 +38,13 @@ app.post("/paxina-app",(req,res)=>{
 
     let condicion = req.body.nome2 === 'Israel' && req.body.apelido2 === 'mariano';
     
-    condicion ? paxinaHome(req,res) : paxinaNoUser(req,res)
+    condicion ? paxinaHome(req,res) : paxinaNoUser(req,res) 
+    
 
+})
+//home-emerxencia
+app.get("/home",(req,res)=>{
+    paxinaHome(req,res)
 })
 // GETTERS PáXINAS
 app.get("/invoices",(req,res)=>{
