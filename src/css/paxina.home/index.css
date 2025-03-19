@@ -141,7 +141,7 @@
 }
 
 
-input{
+#busqueda{
     width:174px ;
     height:20px ;
     position: absolute; /* Para usar top y left */
