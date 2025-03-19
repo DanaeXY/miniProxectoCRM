@@ -46,6 +46,13 @@ app.get("/clientes",(req,res)=>{
 app.get("/graficas",(req,res)=>{
     paxinaGraficas(req,res)
 })
+
+app.get("/productos",(req,res)=>{
+    paxinaCustomers(req,res)
+})
+app.get("/axustes",(req,res)=>{
+    paxinaGraficas(req,res)
+})
 //Un evento dende o cliente
 app.post("/envio-datos-o-servidor",(req,res)=>{
     res.send({mensaxe:"datos enviados"})
