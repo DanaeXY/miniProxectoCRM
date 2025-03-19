@@ -41,11 +41,12 @@ module.exports = {
             template: './src/views/customers.html',
         }),
        
-        new MiniCssExtractPlugin({ filename: './css/styles.css' }), // Arquivo CSS final
+        new MiniCssExtractPlugin({ filename: 'css/[name].css' }), // Arquivo CSS final
         new CopyPlugin({
           patterns: [
+            
             { from: "./src/imaxenes", to: "imaxenes" },
-            { from: "./src/views", to: "views" },
+            
           ],
         })
     ],
