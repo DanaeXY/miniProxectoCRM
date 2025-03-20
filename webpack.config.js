@@ -1,23 +1,28 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+const isDevelopment = process.env.NODE_ENV === "development";
+
+console.log("🔄 Modo:", isDevelopment ? "Desarrollo (Hot Reloading)" : "Producción (MiniCssExtractPlugin)");
+
 module.exports = {
-    mode: "production",// pode ser 'mode:production'
+    mode: isDevelopment ? "development" : "production",
     devtool: "inline-source-map",
-    entry: './src/index.ts', 
+    entry: './src/index.ts',
     module: {
         rules: [
             {
                 test: /\.css$/i,
                 use: [
-                    MiniCssExtractPlugin.loader, // Extrae o CSS nun arquivo separado
-                    'css-loader', // Procesa o CSS
+                    isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
+                    "css-loader",
                 ],
             },
             {
                 test: /\.ts$/,
-                use: 'ts-loader', // Procesa arquivos TypeScript
+                use: 'ts-loader',
                 exclude: /node_modules/,
             },
             {
@@ -30,17 +35,36 @@ module.exports = {
         extensions: ['.ts', '.js'],
     },
     output: {
-        filename: './javascript/bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        filename: 'javascript/bundle.[contenthash].js',
+        path: path.resolve(__dirname, 'dist'),
+        clean: true,
+    },
+    devServer: {
+        static: path.join(__dirname, "dist"),
+        compress: true,
+        port: 3000,
+        hot: true, // 🔥 Activa HMR (Hot Module Replacement)
+        open: true,
+        watchFiles: ["src/css/**/*.css", "src/views/**/*.html"], // 👀 Asegura que observa los cambios en CSS y HTML
+        liveReload: true, // 🔄 Recarga la página automáticamente cuando detecta cambios
+    },    
+    watchOptions: {
+        ignored: /node_modules/,
+        poll: 1000,
     },
     plugins: [
-      
-        new MiniCssExtractPlugin({ filename: './css/styles.css' }), // Arquivo CSS final
+        new MiniCssExtractPlugin({ filename: "css/paxina.settings/index.css" }),
         new CopyPlugin({
-          patterns: [
-            { from: "./src/imaxenes", to: "imaxenes" },
-            { from: "./src/views", to: "views" },
-          ],
-        })
+            patterns: [
+                { from: "./src/imaxenes", to: "imaxenes" },
+                { from: "./src/views", to: "views", globOptions: { ignore: ["**/axustes.html"] } }, // 🔥 Evita copiar axustes.html
+                { from: "./controladores/views", to: "javascript" }
+            ],
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/views/axustes.html",
+            filename: "views/axustes.html",
+            inject: "body"
+        }),
     ],
 };
