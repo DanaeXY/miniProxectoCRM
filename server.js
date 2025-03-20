@@ -36,6 +36,10 @@ app.get("/logueo",(req,res)=>{
 app.get("/no-user",(req,res)=>{
     paxinaNoUser(req,res)
 })
+//paxina home
+app.get("/home",(req,res)=>{
+    paxinaHome(req,res)
+})
 //### POST
 app.post("/paxina-app",(req,res)=>{
     
@@ -44,7 +48,7 @@ app.post("/paxina-app",(req,res)=>{
     let condicion = req.body.nome2 === 'Israel' && req.body.apelido2 === 'mariano';
     
     //condicion ? paxinaHome(req,res) : paxinaNoUser(req,res) 
-    condicion ? paxinaHome(req,res) : res.redirect("/no-user")
+    condicion ?  res.redirect("/home"): res.redirect("/no-user")
 
 })
 //home-emerxencia
@@ -77,6 +81,6 @@ app.post("/envio-datos-o-servidor",(req,res)=>{
 })
 //##########
 //START SERVER
-app.listen(2000, function () {
+app.listen(3000, function () {
  console.log("Server running");
 });
