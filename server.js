@@ -38,14 +38,15 @@ app.get("/no-user",(req,res)=>{
 })
 
 //### POST
-app.post("/paxina-app",(req,res)=>{
+app.post("/logueandome",(req,res)=>{
     
     console.log("recibo dato no server",req.body)
 
     let condicion = req.body.nome2 === 'Israel' && req.body.apelido2 === 'mariano';
     
     //condicion ? paxinaHome(req,res) : paxinaNoUser(req,res) 
-    condicion ?  paxinaHome(req,res): res.redirect("/no-user")
+    //condicion ?  paxinaHome(req,res): res.redirect("/no-user")
+    condicion ? res.send({resposta:"o envío foi correcto"}) : res.send({resposta:"non é o usuario correcto"})
 
 })
 //home-emerxencia

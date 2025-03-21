@@ -1,8 +1,8 @@
 /**
  * @author Pepito Gutierrez
  * @class Comunicacion
- * @method metodoGet
- * @method metodoPost
+ * @method metodoGet método que temos que utilizar para un GET
+ * @method metodoPost métodos que temos que utilizar para un POST
  */
 
 export class Comunicacion{
@@ -21,29 +21,9 @@ export class Comunicacion{
      * @method metodoPost é estático que fai un POST
      * @param endpoint  será un endpoint de tipo texto
      */
-    static async metodoPost(endpoint: string){
-        type datosObxeto = {
-            dato1: string,
-            dato2: string,
-            dato3: number
-        }
-        
-        let datosEnvio: datosObxeto = {
-            dato1: "mariano",
-            dato2: "pepito",
-            dato3: 5
-        }
-    
-        let obxetoEnvio = {
-            method: 'post',
-            headers: {
-                "Content-type":"application/json"
-            },
-            body:JSON.stringify(datosEnvio)
-        }
-        let resposta = await fetch(endpoint,obxetoEnvio);
-
-        this.datos = await resposta.json();
+    static async metodoPost(endpoint: string,datos:any){
+        let resposta = await fetch(endpoint,datos); //  Son os datos que enviamos co endpoint
+        this.datos = await resposta.json();         //  En resposta é que me está a enviar o Server
         console.log("estou en Comuniccion ", this.datos)
     }
     /**
