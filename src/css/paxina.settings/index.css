@@ -550,8 +550,10 @@
 }
 
 [angel="boton-send"]:hover {
-    background-color: rgb(15, 15, 163);
-    border: 1px solid red;
+    background-color: rgb(45, 45, 204);
+    border: 3px solid red;
+    background-color: ;
+
 }
 }
 }
