@@ -402,148 +402,156 @@
     [angel="contenido-principal"] {
         width: 95%;
         height: 100vh;
-        background-color: rgb(231, 224, 224);
+        background-color: rgb(182, 201, 226);
         display: flex;
         flex-direction: column;
     }
 
-    [angel="sections"] {
-        display: flex;
-        justify-content: center;
-    }
-
-    [angel="section-izda"] {
-        background-color: white;
-        padding: 20px;
-        width: 50%;
-        height: 100%;
-        margin-top: 5%;
-        margin-left: 15px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
-    }
-
-    [angel="titulo-superior-izda"] {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
-    [angel="div-superior"] {
-        display: flex;
-        gap: 50px;
-        margin-bottom: 20px;
-    }
-
-    [angel="imagen-superior-izda"] {
-        margin-top: 20px;
-    }
-
-    [angel="botones-superior-izda"] {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        transition: all 0.3s ease;
-    }
-
-    [angel="boton-change"] {
-        margin-top: 30px;
-        width: 150px;
-        border: 1px solid rgb(15, 15, 163);
-        border-radius: 5px;
-        background-color: #4b8ce7;
-        color: white;
-        padding: 10px;
-        cursor: pointer;
-    }
-
-    [angel="boton-change"]:hover {
-        background-color: rgb(15, 15, 163);
-        color: white;
-    }
-
-    [angel="boton-delete"] {
-        width: 150px;
-        border: 1px solid #8b8989;
-        border-radius: 5px;
-        padding: 10px;
-        cursor: pointer;
-    }
-
-    [angel="boton-delete"]:hover {
-        background-color: rgb(15, 15, 163);
-        color: white;
-    }
-
-    [angel="contenedor-superior"] {
-        display: flex;
-        flex-direction: column;
-    }
-
-    [angel="label-nombre"] {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-
-    [angel="label-apellido"] {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-
-    [angel="contenedor-inferior"] {
-        display: flex;
-        flex-direction: column;
-        font-weight: bold;
-        gap: 5px;
-        margin-bottom: 5px;
-    }
-
-    [angel="section-dcha"] {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        margin-top: 4%;
-        gap: 80px;
-    }
-
-    [angel="section-superior-dcha"] {
-        background-color: white;
-        padding: 3px;
-        display: flex;
-        justify-content: center;
-    }
-
-    [angel="section-superior-dcha"] img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 80%;
-        height: auto;
-    }
-
-    [angel="section-inferior-izda"] [angel="boton-send"] {
-        background-color: #4b8ce7;
-        color: white;
-        width: 200px;
-        height: 60px;
-        border: none;
-        border-radius: 5px;
-        align-items: center;
-        font-weight: bold;
-        font-size: large;
-        display: flex;
-        justify-content: center;
-        cursor: pointer;
-    }
-
-    [angel="section-inferior-izda"] [angel="boton-send"]:hover {
-        background-color: rgb(15, 15, 163);
-    }
+/* Contenedor principal */
+[angel="sections"] {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre secciones */
 }
 
+/* SECCIÓN IZQUIERDA - Ajustada para que entre todo */
+[angel="section-izda"] {
+    background-color: white;
+    width: 440px; /* Un poco más ancha */
+    padding: 30px;
+    margin-top: 5%;
+    box-shadow: 0 8px 16px rgba(0, 0, 1, 0.8);
+    border: 3px solid rgb(112, 80, 80);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Imagen centrada y ajustada para que no sobresalga */
+[angel="imagen-superior-izda"] {
+    width: 120px;
+    height: auto;
+    margin-top: -10px; /* Un poco menos negativo */
+}
+
+/* Contenedor de botones alineado */
+[angel="botones-superior-izda"] {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Botones con color y hover */
+[angel="boton-change"],
+[angel="boton-delete"] {
+    width: 130px;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+[angel="boton-change"] {
+    background-color: #4b8ce7;
+    color: white;
+    border: 2px solid rgb(15, 15, 163);
+}
+
+[angel="boton-change"]:hover {
+    background-color: rgb(15, 15, 163);
+    border-color: rgb(0, 0, 90);
+}
+
+[angel="boton-delete"] {
+    background-color: white;
+    color: black;
+    border: 2px solid #8b8989;
+}
+
+[angel="boton-delete"]:hover {
+    background-color: rgb(15, 15, 163);
+    color: white;
+    border-color: rgb(0, 0, 90);
+}
+
+/* Labels alineados y con más espacio */
+[angel="contenedor-superior"],
+[angel="contenedor-inferior"] {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Labels más grandes y en negro */
+[angel="label-nombre"],
+[angel="label-apellido"],
+[angel="label-empresa"],
+[angel="label-mail"],
+[angel="label-profesion"],
+[angel="label-rol"] {
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+}
+
+/* Inputs ajustados para que no se salgan */
+[angel="contenedor-superior"] input,
+[angel="contenedor-inferior"] input {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* SECCIÓN DERECHA - Más estrecha para equilibrar */
+[angel="section-dcha"] {
+    width: 260px; /* Un poco más estrecha */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-top: 4%;
+    gap: 40px;
+}
+
+/* Imagen en sección derecha */
+[angel="section-superior-dcha"] img {
+    max-width: 90%;
+    height: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
+
+/* Botón de enviar */
+[angel="boton-send"] {
+    background-color: #4b8ce7;
+    color: white;
+    width: 200px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+[angel="boton-send"]:hover {
+    background-color: rgb(15, 15, 163);
+    border: 1px solid red;
+}
+}
 }
