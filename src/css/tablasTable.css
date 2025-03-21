@@ -1,88 +1,89 @@
-    <style>
-      #invoices {
-        font-family: Arial, Helvetica, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
-      }
-      
-      #invoices td, #invoices th {
-        border: 1px solid #ddd;
-        padding: 8px;
-      }
-      
-      #invoices tr:nth-child(even){background-color: #f2f2f2;}
-      
-      #invoices tr:hover {background-color: #ddd;}
-      
-      #invoices th {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-align: left;
-        background-color: #04AA6D;
-        color: white;
-      }
-      </style>
-      </head>
-      <body>
-      
-      <h1>Tabla en CSS</h1>
-      
-      <table id="invoices">
-        <tr>
-          <th>Date</th>
-          <th>Number</th>
-          <th>Customer</th>
-          <th>Amount</th>
-          <th>Outstanding</th>
-          <th>Due Date</th>
-          <th>State</th>
-        </tr>
-        <tr>
-          <td>21-2-2018</td>
-          <td>00087</td>
-          <td>Reactial</td>
-          <td>$2500</td>
-          <td>0</td>
-          <td>17-3-2018</td>
-          <td>Invoices</td>
-        </tr>
-        <tr>
-          <td>16-2-2018</td>
-          <td>00086</td>
-          <td>Promotional</td>
-          <td>$1890</td>
-          <td>0</td>
-          <td>18-11-2018</td>
-          <td>Paid</td>
-        </tr>
-        <tr>
-          <td>29-1-2018</td>
-          <td>00085</td>
-          <td>Effie Watkings</td>
-          <td>$3400</td>
-          <td>0</td>
-          <td>7-9-2018</td>
-          <td>Overdue</td>
-        </tr>
-        <tr>
-          <td>27-1-2018</td>
-          <td>00084</td>
-          <td>Traveller</td>
-          <td>$600</td>
-          <td>0</td>
-          <td>1-2-2018</td>
-          <td>Paid</td>
-        </tr>
-        <tr>
-          <td>7-1-2018</td>
-          <td>00083</td>
-          <td>Reactial</td>
-          <td>$400</td>
-          <td>0</td>
-          <td>27-6-2018</td>
-          <td>Due Date</td>
-        </tr>                 
-      </table>
-              </p>
-  </body>
-</html>
+<style>
+#invoices {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#invoices td, #invoices th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#invoices tr:nth-child(even){background-color: #f2f2f2;}
+
+#invoices tr:hover {background-color: #ddd;}
+
+#invoices th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>Invoices</h1>
+
+<table id="invoices">
+  <tr>
+    <th>Date</th>
+    <th>Number</th>
+    <th>Customer</th>
+    <th>Amount</th>
+    <th>Outstanding</th>
+    <th>Due Date</th>
+    <th>State</th>
+  </tr>
+  <tr>
+    <td>21-2-2018</td>
+    <td>00087</td>
+    <td>Reactial</td>
+    <td>$2500</td>
+    <td>0</td>
+    <td>17-3-2018</td>
+    <td>Invoices</td>
+  </tr>
+  <tr>
+    <td>16-2-2018</td>
+    <td>00086</td>
+    <td>Promotional</td>
+    <td>$1890</td>
+    <td>0</td>
+    <td>18-11-2018</td>
+    <td>Paid</td>
+  </tr>
+  <tr>
+    <td>29-1-2018</td>
+    <td>00085</td>
+    <td>Effie Watkings</td>
+    <td>$3400</td>
+    <td>0</td>
+    <td>7-9-2018</td>
+    <td>Overdue</td>
+  </tr>
+  <tr>
+    <td>27-1-2018</td>
+    <td>00084</td>
+    <td>Traveller</td>
+    <td>$600</td>
+    <td>0</td>
+    <td>1-2-2018</td>
+    <td>Paid</td>
+  </tr>
+  <tr>
+    <td>7-1-2018</td>
+    <td>00083</td>
+    <td>Reactial</td>
+    <td>$400</td>
+    <td>0</td>
+    <td>27-6-2018</td>
+    <td>Due Date</td>
+       </tr>    
+          </table>
+        </body>
+        <button><a href="../views/index.html">Index.html en src views</a></button>
+        <button><a href="../views/grid.html">tablas on tr,th y tr</a></button>
+        </html>
