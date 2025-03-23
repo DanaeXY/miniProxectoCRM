@@ -1,9 +1,12 @@
 const express = require("express");
 const path = require("path");
-const { paxinaApp, paxinaNoUser,paxinaLogueo, paxinaInvoices, paxinaCesta, paxinaCustomers, paxinaGraficas, paxinaNewProduct, paxinaHome, paxinaAxustes } = require("./controladores/views");
+const { paxinaNoUser,paxinaLogueo, paxinaInvoices, paxinaCesta, paxinaCustomers, paxinaGraficas, paxinaNewProduct, paxinaHome, paxinaAxustes } = require("./controladores/views");
+const { logueo, isUser } = require("./middleware");
+const { paxinaApiHome } = require("./controladores/views.texto");
 
 const app = express();
-
+//dontenv
+require('dotenv').config(); 
 // USE
 // É para interpretar datos do formulario
 app.use(express.urlencoded({extended: true}));
@@ -19,37 +22,20 @@ app.use(express.static(path.join(__dirname, "dist")));
  * @returns mensaxe obxeto
  *
  */
-app.get("/recibo-datos-do-servidor",(req,res)=>{
-    res.send({
-        mensaxe:{
-            dato1:"Juanito",
-            dato2:"pepito",
-            dato3:3
-        }
-    })
-})
+
 app.get("/logueo",(req,res)=>{
     paxinaLogueo(req,res)
 })
 
-//paxina no-user
+//paxina no-user é utilizada en caso de que non se envíe unha mensaxe 
 app.get("/no-user",(req,res)=>{
     paxinaNoUser(req,res)
 })
 
 //### POST
-app.post("/logueandome",(req,res)=>{
-    
-    console.log("recibo dato no server",req.body)
-
-    let condicion = req.body.nome2 === 'Israel' && req.body.apelido2 === 'mariano';
-    
-    //condicion ? paxinaHome(req,res) : paxinaNoUser(req,res) 
-    //condicion ?  paxinaHome(req,res): res.redirect("/no-user")
-    condicion ? res.send({resposta:"o envío foi correcto"}) : res.send({resposta:"non é o usuario correcto"})
-
-})
+app.post("/logueandome",logueo)
 //home-emerxencia
+app.get("/api/home",isUser,paxinaApiHome)
 app.get("/home",(req,res)=>{
     paxinaHome(req,res)
 })
@@ -72,11 +58,7 @@ app.get("/productos",(req,res)=>{
 app.get("/axustes",(req,res)=>{
     paxinaAxustes(req,res)
 })
-//Un evento dende o cliente
-app.post("/envio-datos-o-servidor",(req,res)=>{
-    console.log("req.body ",req.body,req.body.datosEnvio )
-    res.send({mensaxe:"datos enviados"})
-})
+
 //##########
 //START SERVER
 app.listen(3000, function () {

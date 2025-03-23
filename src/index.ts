@@ -25,12 +25,23 @@ if(location.pathname == "/logueo"){
     console.log("refBotonFormulario",refBotonFormulario);
 
     refBotonFormulario.addEventListener("click",async (e)=>{
+        
         e.preventDefault()
+        let respostaServidor: Response;
         let oFormulario = new Formulario("#form-logueo");
         oFormulario.metodoAccionFormulario();
         let datosFormulario = oFormulario.DatosEnviados;
-        await Comunicacion.metodoPost("/logueandome",datosFormulario)
-    })
+        await Comunicacion.metodoPost("/logueandome",datosFormulario);
+        let user = Comunicacion.isUser()
+        if(user){
+            let usarioToken = localStorage.getItem("usuario")
+            console.log("usarioToken" , usarioToken)
+            location.href = "/home"
+        }else{
+            console.log("Non é o usuario")
+        }
+        
+    }) 
 }
 
 

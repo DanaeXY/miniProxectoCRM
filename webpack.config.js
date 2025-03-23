@@ -5,7 +5,10 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
     mode: "development",// pode ser 'mode:production'
     devtool: "inline-source-map",
-    entry: './src/index.ts', 
+    entry: {
+      index:'./src/index.ts',
+      home:'./src/paxinas.typescript/home/index.ts'
+    }, 
     module: {
         rules: [
              {
@@ -30,7 +33,7 @@ module.exports = {
         extensions: ['.ts', '.js'],
     },
     output: {
-        filename: './javascript/bundle.js',
+        filename: './javascript/[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
